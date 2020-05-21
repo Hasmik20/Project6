@@ -55,7 +55,8 @@ const checkLetter = button =>{
     const letter = document.querySelectorAll('.letter')
          for(let i = 0; i < letter.length; i++){
           if(button === letter[i].textContent.toLowerCase()){
-            letter[i].className = "show"
+            // letter[i].className = "show"
+            letter[i].classList.add("show");
             match = true
         }
     }
