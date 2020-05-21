@@ -71,8 +71,9 @@ qwerty.addEventListener('click',(e) => {
     } 
     const letterFound = checkLetter(e.target.textContent)
     if(letterFound === null && e.target.tagName === 'BUTTON' ){
-        heart = 5;
-        heart--;
+        for(let i=0; i < heart.length; i++){
+         heart[i].setAttribute('src',"images/lostHeart.png")
+        }
         missed++; 
      }
  checkWin(checkLetter)
@@ -85,17 +86,23 @@ qwerty.addEventListener('click',(e) => {
         const title = document.querySelector('.title')
         if(letter.length === show.length){
             overlay.className ='win';
+            overlay.classList.add("win");
             title.textContent = "You win"
             overlay.style.display = "flex"
-        }else if(missed >= 4){
+        }else if(missed >= 5){
             overlay.className ='lose';
             title.textContent = "You lost"
             overlay.style.display = "flex"
-            overlay.textContent = "Try again"
+        
         }
         
    }
-
+   const reloadPage = document.querySelector('#reload')
+   reloadPage.addEventListener('click',(e) => {
+       if(e.target.textContent === "You win" || e.target.textContent === "You lost" )
+       location.reload(true)
+   })
+ 
 
 
 
