@@ -144,6 +144,7 @@ color:#FFFFFF
   left: 0;
   right: 0;
   border-radius: 5px;
+
 }
 
 .title {
@@ -166,6 +167,7 @@ color:#FFFFFF
 
 .win {
   background-color: var(--color-win);
+ 
 }
 
 .win a {
