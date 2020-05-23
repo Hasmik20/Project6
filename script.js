@@ -44,9 +44,7 @@ addPhraseToDisplay(phraseArray);
 
 //Attach a event listener to the “Start Game” button to hide the start screen overlay.
 startGame.addEventListener('click', () => {
-    overlay.style.display = "none"
-    
-
+    overlay.style.display = "none"   
 })
 
 
