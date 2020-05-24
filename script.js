@@ -7,11 +7,12 @@ let heart = document.querySelectorAll('img')
 
 
 const phrases =[
-    'burst your bubble',
-    'cup of joe',
-    'a dime a dozen',
-    'a piece of cake',
-    'cut to the chase'
+    ' an apple a day keeps the doctor away',
+    ' all good things come to an end',
+    ' a thing begun is half done',
+    'barking dogs seldom bite.',
+    'better late than never',
+    'best things in life are free'
 ]
 
 //Create a getRandomPhraseAsArray function.
@@ -96,7 +97,7 @@ qwerty.addEventListener('click',(e) => {
          overlayA.style.color = "coral"
         overlayA.style.backgroundColor = "#76CE82"
           
-        }else if(missed >= 5){
+        }else if(missed >= 7){
             overlay.classList.add ='lose';
             title.textContent = "You lost"
             overlay.style.display = "flex"
