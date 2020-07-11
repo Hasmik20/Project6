@@ -45,7 +45,8 @@ addPhraseToDisplay(phraseArray);
 
 //Attach a event listener to the “Start Game” button to hide the start screen overlay.
 startGame.addEventListener('click', () => {
-    overlay.style.display = "none"   
+    overlay.style.display = "none";
+   
 })
 
 
@@ -96,6 +97,9 @@ qwerty.addEventListener('click',(e) => {
          overlayA.style.fontSize = '30px'
          overlayA.style.color = "coral"
         overlayA.style.backgroundColor = "#76CE82"
+        setTimeout(function(){
+            location.reload(); 
+            },1000);  
           
         }else if(missed >= 7){
             overlay.classList.add ='lose';
@@ -107,10 +111,12 @@ qwerty.addEventListener('click',(e) => {
             overlayA.style.color = "coral"
             overlayA.style.backgroundColor = "#76CE82"
          
-           
+         setTimeout(function(){
+            location.reload(); 
+            },1000);  
         
         }     
-         
+        
    }
 
  
